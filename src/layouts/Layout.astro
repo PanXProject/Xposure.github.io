@@ -1,0 +1,55 @@
+---
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Xposure a listing and reputation management platfrom to manage your brand's online presence."
+    />
+    <title>{title}</title>
+    <!-- Brevo Conversations {literal} -->
+<script>
+  (function(d, w, c) {
+      w.BrevoConversationsID = '65946738ce762317c8404828';
+      w[c] = w[c] || function() {
+          (w[c].q = w[c].q || []).push(arguments);
+      };
+      var s = d.createElement('script');
+      s.async = true;
+      s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+      if (d.head) d.head.appendChild(s);
+  })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      html {
+        font-family: Inter;
+        background-color: #26272b;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  </body>
+</html>

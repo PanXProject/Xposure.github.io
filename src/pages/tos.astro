@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Terms } from "../components/Terms.jsx";
+import { Divider } from "../components/Divider.jsx";
+import { TermsC } from "../components/TermsC.jsx";
+import { Navbar } from "../components/Navbar.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+
+---
+
+<Layout title="Xposure">
+  <Navbar client:load />
+  <Terms client:load />
+  <Divider />
+  <TermsC client:load />
+  <Footer />
+  <ScrollUpButton client:load />
+</Layout>

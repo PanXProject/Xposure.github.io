@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Policy } from "../components/Policy.jsx";
+import { Divider } from "../components/Divider.jsx";
+import { PolicyC } from "../components/PolicyC.jsx";
+import { Navbar } from "../components/Navbar.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+
+---
+
+<Layout title="Xposure">
+  <Navbar client:load />
+  <Policy client:load />
+  <Divider />
+  <PolicyC client:load />
+  <Footer />
+  <ScrollUpButton client:load />
+</Layout>
